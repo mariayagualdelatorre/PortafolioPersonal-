@@ -1,0 +1,14 @@
+   --primary-color: #8a4b6e;
+    --secondary-color: #b57295;
+    --accent-color: #d1a1b8;
+    --bg-light: #fbf8f9;
+    --bg-white: #ffffff;
+    --text-dark: #3a2e39;
+    --text-muted: #6e5e6b;
+    --text-light: #ffffff;
+    --border-color: #f0e2e9;
+    --shadow-soft: 0 10px 30px rgba(138, 75, 110, 0.08);
+    --shadow-hover: 0 15px 35px rgba(138, 75, 110, 0.15);
+    --font-main: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
