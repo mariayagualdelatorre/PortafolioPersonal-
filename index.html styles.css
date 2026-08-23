@@ -1,0 +1,23 @@
+HTML
+        <!-- 3. Sobre mí -->
+        <section id="sobre-mi" class="about-section">
+            <h2>Sobre mí</h2>
+            <p>
+                Hola, soy María Yagual, una estudiante entusiasta por el aprendizaje continuo en el ámbito tecnológico. 
+                Me apasiona el desarrollo web frontend y la resolución de problemas mediante código. Mis objetivos 
+                profesionales enfocan mi crecimiento hacia el desarrollo de software accesible y eficiente.
+            </p>
+        </section>
+
+        <!-- 4. Habilidades -->
+        <section id="habilidades" class="skills-section">
+            <h2>Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill-card">HTML5</div>
+                <div class="skill-card">CSS3</div>
+                <div class="skill-card">GitHub</div>
+                <div class="skill-card">Diseño Web</div>
+                <div class="skill-card">Programación</div>
+                <div class="skill-card">Trabajo en Equipo</div>
+            </div>
+        </section>
