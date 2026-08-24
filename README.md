@@ -10,7 +10,7 @@ Este repositorio contiene el código fuente de mi portafolio personal, desarroll
 
 ## 👩‍💻 Estudiante
 * **Nombre:** María Yagual
-* **Carrera / Perfil:** Estudiante de Desarrollo de Software
+* **Carrera / Perfil:** Estudiante de Sistema inteligente
 * **GitHub:** [@mariayagualdelatorre](https://github.com/mariayagualdelatorre)
 * **LinkedIn:** [María Yagual de la Torre](https://www.linkedin.com/in/mar%C3%ADa-yagual-de-la-torre-b08915377/)
 
