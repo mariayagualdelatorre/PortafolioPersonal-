@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Personal | María Yagual</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts para tipografía refinada -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 1. Encabezado -->
+    <header class="header">
+        <div class="logo">
+            <h1>María Yagual</h1>
+            <p>Estudiante de Desarrollo de Software</p>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 2. Sección Principal -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <span class="badge">Portafolio Profesional</span>
+                <h2>Bienvenida a mi espacio creativo</h2>
+                <p>Apasionada por la tecnología, el diseño web accesible y el desarrollo de soluciones digitales elegantes y funcionales.</p>
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/mar%C3%ADa-yagual-de-la-torre-b08915377/" target="_blank" class="btn btn-linkedin">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/mariayagualdelatorre" target="_blank" class="btn btn-github">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/perfil.jpg" alt="Foto personal de María Yagual">
+            </div>
+        </section>
+
+        <!-- 3. Sobre mí -->
+        <section id="sobre-mi" class="about-section">
+            <h2>Sobre mí</h2>
+            <p>
+                Hola, soy María Yagual, una estudiante entusiasta por el aprendizaje continuo en el ámbito tecnológico. 
+                Me apasiona el desarrollo web frontend y la resolución de problemas mediante código. Mis objetivos 
+                profesionales enfocan mi crecimiento hacia el desarrollo de software accesible y eficiente, buscando 
+                siempre colaborar en proyectos innovadores y adquirir nueva experiencia práctica.
+            </p>
+        </section>
+
+        <!-- 4. Habilidades -->
+        <section id="habilidades" class="skills-section">
+            <h2>Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill-card">HTML5</div>
+                <div class="skill-card">CSS3</div>
+                <div class="skill-card">GitHub</div>
+                <div class="skill-card">Diseño Web</div>
+                <div class="skill-card">Programación</div>
+                <div class="skill-card">Trabajo en Equipo</div>
+            </div>
+        </section>
+
+        <!-- 5. Proyectos -->
+        <section id="proyectos" class="projects-section">
+            <h2>Proyectos</h2>
+            <div class="projects-grid">
+                
+                <article class="project-card">
+                    <div class="card-img-wrapper">
+                        
+                    </div>
+                    <h3>Sitio Web Académico</h3>
+                    <p>Página web interactiva desarrollada para una asignatura universitaria utilizando HTML y CSS puro.</p>
+                    <a href="https://github.com/mariayagualdelatorre" target="_blank" class="btn">Ver Proyecto</a>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-img-wrapper">
+                        
+                    </div>
+                    <h3>Calculadora de Lógica</h3>
+                    <p>Pequeño proyecto funcional enfocado en la práctica de algoritmos y maquetación estructurada.</p>
+                    <a href="https://github.com/mariayagualdelatorre" target="_blank" class="btn">Ver Proyecto</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 6. Contacto -->
+        <section id="contacto" class="contact-section">
+            <h2>Contacto</h2>
+            <form class="contact-form" action="#" method="POST" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- 7. Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2026 María Yagual. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="https://github.com/mariayagualdelatorre" target="_blank">GitHub</a>
+            <span>•</span>
+            <a href="https://www.linkedin.com/in/mar%C3%ADa-yagual-de-la-torre-b08915377/" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+
+</body>
+</html>
