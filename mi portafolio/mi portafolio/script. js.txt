@@ -1,0 +1,88 @@
+const botonModo = document.getElementById('boton-modo');
+const cuerpoPagina = document.body;
+const textoSobreMi = document.getElementById('texto-sobre-mi');
+const botonProyectos = document.getElementById('boton-proyectos');
+const listaProyectos = document.getElementById('lista-proyectos');
+const formulario = document.getElementById('formulario-contacto');
+const mensajeConfirmacion = document.getElementById('mensaje-confirmacion');
+const botonArriba = document.getElementById('boton-arriba');
+const fechaHoraElemento = document.getElementById('fecha-hora');
+const mensajeUsuario = document.getElementById('mensaje-usuario');
+
+function alternarModoOscuro() {
+    cuerpoPagina.classList.toggle('modo-oscuro');
+    const modoActivo = cuerpoPagina.classList.contains('modo-oscuro') ? 'oscuro' : 'claro';
+    localStorage.setItem('preferenciaModo', modoActivo);
+    botonModo.textContent = modoActivo === 'oscuro' ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
+}
+
+function alternarProyectos() {
+    listaProyectos.classList.toggle('oculto');
+    botonProyectos.textContent = listaProyectos.classList.contains('oculto') 
+        ? 'Mostrar Proyectos' : 'Ocultar Proyectos';
+}
+
+function mostrarFechaHora() {
+    const ahora = new Date();
+    fechaHoraElemento.textContent = `Fecha y hora actual: ${ahora.toLocaleString()}`;
+}
+
+function validarFormulario(evento) {
+    evento.preventDefault();
+    const nombre = document.getElementById('nombre').value.trim();
+    const correo = document.getElementById('correo').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+
+    localStorage.setItem('nombreGuardado', nombre);
+    localStorage.setItem('correoGuardado', correo);
+    localStorage.setItem('mensajeGuardado', mensaje);
+
+    if (nombre === '' || correo === '' || mensaje === '') {
+        mensajeConfirmacion.textContent = '❌ Error: Todos los campos son obligatorios.';
+        mensajeConfirmacion.style.color = 'red';
+    } else {
+        mensajeConfirmacion.textContent = `✅ ¡Gracias ${nombre}! Tu mensaje ha sido enviado correctamente.`;
+        mensajeConfirmacion.style.color = 'green';
+        formulario.reset();
+        localStorage.removeItem('nombreGuardado');
+        localStorage.removeItem('correoGuardado');
+        localStorage.removeItem('mensajeGuardado');
+    }
+}
+
+function volverAlInicio() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function cargarDatosGuardados() {
+    const modoGuardado = localStorage.getItem('preferenciaModo');
+    if (modoGuardado === 'oscuro') {
+        cuerpoPagina.classList.add('modo-oscuro');
+        botonModo.textContent = '☀️ Modo Claro';
+    }
+    const nombreGuardado = localStorage.getItem('nombreGuardado');
+    if (nombreGuardado && nombreGuardado !== '') {
+        mensajeUsuario.textContent = `¡Bienvenido de nuevo, ${nombreGuardado}! 👋`;
+    }
+}
+
+botonModo.addEventListener('click', alternarModoOscuro);
+botonProyectos.addEventListener('click', alternarProyectos);
+
+textoSobreMi.addEventListener('mouseover', function() {
+    textoSobreMi.textContent = '¡Gracias por visitar mi portafolio! 🎉';
+    textoSobreMi.style.color = '#2980b9';
+});
+
+textoSobreMi.addEventListener('mouseout', function() {
+    textoSobreMi.textContent = 'Hola, soy un estudiante de desarrollo web. ¡Pasa el cursor aquí!';
+    textoSobreMi.style.color = '';
+});
+
+formulario.addEventListener('submit', validarFormulario);
+botonArriba.addEventListener('click', volverAlInicio);
+
+window.addEventListener('load', function() {
+    cargarDatosGuardados();
+    mostrarFechaHora();
+});
